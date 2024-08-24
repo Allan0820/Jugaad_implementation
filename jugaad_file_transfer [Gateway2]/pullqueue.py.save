@@ -1,0 +1,16 @@
+import pika
+
+credentials=pika.PlainCredentials('OMR_RMQ','Omr@123')
+connection = pika.BlockingConnection(pika.ConnectionParameters('172.23.254.74', 5672,'/', credentials))
+
+channel=connection.channel()
+
+channel.queue_declare("queue_1")
+
+
+
+
+channel.basic_consume(queue='queue_1', auto_ack=True, on_message_callback=on_message_received)
+
+
+
