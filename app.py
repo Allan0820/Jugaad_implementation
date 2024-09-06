@@ -3,9 +3,11 @@ import uuid
 import pika 
 import hashlib
 import json
+import psycopg2
+from zipfile import ZipFile
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail, Message
-
+import zipfile
 
 from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -23,8 +25,8 @@ CORS(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]=False
-app.config['UPLOAD_FOLDER']='/home/omrapp/lol/File_hash/'
-
+# app.config['UPLOAD_FOLDER']='/home/omrapp/lol/File_hash/'
+app.config['UPLOAD_FOLDER']='/home/omrapp/Desktop/filehash/'
 
 app.config['DEBUG']=True
 app.config['TESTING']=False
@@ -40,23 +42,26 @@ app.config['MAIL_DEFAULT_SENDER']=None
 app.config['MAIL_MAX_EMAILS']=None
 # app.config['MAIL_SUPPRESS_SEND']=False
 app.config['MAIL_ASCII_ATTACHMENTS']=False
-
-
 #  app password   fgyy axcd depv vexe
-mail=Mail(app)
-db= SQLAlchemy(app)
+# mail=Mail(app)
 
-# class users(db.Model):
-#      _id = db.Column("ID", db.Integer, primary_key=True)
-#      email_id=db.Column(db.String(100))
-#      file_uuid=db.Column(db.String(100))
-#      request_count=db.Column(db.Integer)
+connection = psycopg2.connect(
+                      database="omrdatabase", 
+                      host="172.23.254.74", 
+                      port=5432,
+                      user="omruser",
+                      password="Omr@123" ,
+                    )
 
-#      def __init__(self, email_id, file_uuid, request_count):
-          
-#           self.email_id=email_id
-#           self.file_uuid=file_uuid
-#           self.request_count=request_count
+cursor=connection.cursor()
+connection.autocommit=True 
+
+# sql = '''select * from omr_data;'''
+
+# cursor.execute(sql)
+
+# print(list((cursor.fetchall()[0]))[2])
+
 
 
 def pushqueue(filehash, jobid):
@@ -101,48 +106,61 @@ def receive():
         print("inside")
 
         files = request.files['files']
-        
         email = request.form['email'] 
-        
         comments = request.form['comments']
-        
-        #print(files, email, comments)
-        
-     #   msg= Message('JUGAAD Testbed - Your runtime trails are ready !', sender='allan.n.pais@gmail.com', recipients=[request.form['email']])
-      #  msg.body='Dear '+email+'Your runtime trails are available in the file below. \n Thank you for using OpenMalwareResearch!'
-# /home/allan/Desktop/OMR_CB/Jugaad_test/instance/test.txt'
-       # with app.open_resource("/home/allan/Desktop/OMR_CB/Jugaad_test/instance/received_files/test.txt") as fp:
-        #with app.open_resource(os.path.join(app.instance_path, 'test.txt')) as fp:
-        # msg.attach("test.txt", "application/txt", fp.read())
-        #mail.send(msg)
-
-        #filename="["+str(uuid.uuid4())+"]_"+files.filename
-        #bytestring=str.encode(secure_filename(files.filename))
         filename=secure_filename(files.filename)
-        
-       # file_md5_hash=hashlib.md5(files.read()).hexdigest()
-        #filename=file_md5_hash
-        #put the file in the database and then query the jobid number 
-        
-        #sample data 
-        job_id=1001
-        #sample data 
-        
         
         print(email)
         #os.makedirs(os.path.join(app.instance_path, 'Uploaded_files'))
         file_md5_hash=hashlib.md5(files.read()).hexdigest()
         filename=file_md5_hash
-        files.seek(0) #getting the file pointer to the start 
-        files.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
-        os.chmod(os.path.join(app.config['UPLOAD_FOLDER'],filename),0o666)
+        print(filename)
         
-        print(file_md5_hash)
-        #os.rename(os.path.join(app.config['UPLOAD_FOLDER'],filename),os.path.join(app.config['UPLOAD_FOLDER'],file_md5_hash)) 
-        pushqueue(file_md5_hash, job_id)
-        file_md5_hash=""
-        return "File pushed to the message queue successfully! Press back to continue"
-    
+        # run a database precheck 
+        cursor.execute("select count(%s) from omr_data where file_hash=%s AND job_status='pending';",(filename,filename))
+        pending_temp=list(cursor.fetchall()[0])[0] 
+        cursor.execute("select count(%s) from omr_data where file_hash=%s AND job_status='processing';",(filename,filename))
+        processing_temp=list(cursor.fetchall()[0])[0] 
+        cursor.execute("select count(%s) from omr_data where file_hash=%s AND job_status='complete';",(filename,filename))
+        complete_temp=list(cursor.fetchall()[0])[0] 
+        # print("Number of rows are ",len(cursor.fetchall()))
+        print(pending_temp)
+        print(processing_temp)
+        print(complete_temp)
+        if ((pending_temp + processing_temp + complete_temp) == 0):
+            
+
+            files.seek(0) #getting the file pointer to the start 
+        
+            files.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
+            print("hi")
+            with ZipFile(filename, 'w', zipfile.ZIP_DEFLATED) as myzip:
+              myzip.write(filename)
+            print("zipped")
+            # changing file permissions 
+            os.chmod(os.path.join(app.config['UPLOAD_FOLDER'],filename),0o666)
+           
+
+            cursor.execute("insert into omr_data values (DEFAULT,%s,%s,%s,NULL,'pending')",(email,filename,comments))
+            
+            cursor.execute("select job_id from omr_data where file_hash=%s AND job_status='pending';",(filename,))
+            job_id=list(cursor.fetchall()[0])[0] 
+            
+            pushqueue(file_md5_hash, job_id)
+            # file_md5_hash=""
+            return "File pushed to the message queue successfully! Press back to continue"
+        elif (pending_temp != 0):
+            return "A similar file has been submitted and is awaiting processing, an email with the report for this file will be sent shortly OR Please try again later"    
+        elif (processing_temp != 0):
+            return "A similar file has been submitted and is currently processing, an email with the report for this file will be sent shortly OR Please try again later "  
+        else :
+
+            cursor.execute("select trail_hash from omr_data where file_hash=%s AND job_status='complete';",(filename))
+            trail_hash=list(cursor.fetchall()[0])[0]
+            # call to the send_email() function 
+            return "A similar file has been processed and a report will be sent via email shortly"
+
+        
  
 @app.route('/upload_file/', methods=['POST'])
 def upload_file():

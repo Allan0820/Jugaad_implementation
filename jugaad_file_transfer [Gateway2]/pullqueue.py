@@ -2,9 +2,20 @@ import pika
 import json
 import os
 import uuid
+import psycopg2
 credentials=pika.PlainCredentials('OMR_RMQ','Omr@123')
 connection = pika.BlockingConnection(pika.ConnectionParameters('172.23.254.74', 5672,'/', credentials))
 connection2 = pika.BlockingConnection(pika.ConnectionParameters('172.23.254.74', 5672,'/', credentials))
+
+connection1 = psycopg2.connect(
+                      database="omrdatabase", 
+                      host="172.23.254.74", 
+                      port=5432,
+                      user="omruser",
+                      password="Omr@123" ,
+                    )
+cursor=connection1.cursor()
+connection1.autocommit=True 
 
 
 def pushqueue(fileuuid, jobid): 
@@ -23,11 +34,15 @@ def pushqueue(fileuuid, jobid):
 
 
 def on_message_received(ch, method, properties, body):
+
+
+    
     json_value=json.loads(body)
     filehash=json_value["File_Hash"]
     jobid=json_value["Job_Id"]
     print(f"received a new filehash= {filehash} and a new jobid = {jobid}")
-    
+    cursor.execute("update omr_data set job_status='processing' where job_id=%s",(jobid,))
+
     file_path='/home/omr/files/'+filehash
     
         # Call the shell script using subprocess.run

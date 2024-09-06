@@ -1,69 +1,92 @@
-import pika 
-import json 
-from flask import Flask
-from flask_mail import Mail, Message
+import pika
+import json
+import os
+import uuid
+import psycopg2
+import smtplib
+import smtplib
+from os.path import basename
+from email.mime.application import MIMEApplication
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+credentials=pika.PlainCredentials('OMR_RMQ','Omr@123')
+connection2 = pika.BlockingConnection(pika.ConnectionParameters('172.23.254.74', 5672,'/', credentials))
 
-from flask_cors import CORS
-app = Flask(__name__)
+connection1 = psycopg2.connect(
+                      database="omrdatabase", 
+                      host="172.23.254.74", 
+                      port=5432,
+                      user="omruser",
+                      password="Omr@123" ,
+                    )
+cursor=connection1.cursor()
+connection1.autocommit=True 
 
+def on_message_received(ch, method, properties, body):
 
-app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024 
-CORS(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]=False
-app.config['UPLOAD_FOLDER']='/home/omrapp/lol/File_hash/'
-app.config['DEBUG']=True
-app.config['TESTING']=False
-app.config['MAIL_SERVER']='smtp.gmail.com'
-app.config['MAIL_PORT']=587
-app.config['MAIL_USE_TLS']=True
-app.config['MAIL_USE_SSL']=False
-# app.config['MAIL_DEBUG']=True
-app.config['MAIL_USERNAME']='allan.n.pais@gmail.com'
-app.config['MAIL_SENDER']='allan.n.pais@gmail.com'
-app.config['MAIL_PASSWORD']='fgyy axcd depv vexe'
-app.config['MAIL_DEFAULT_SENDER']=None
-app.config['MAIL_MAX_EMAILS']=None
-# app.config['MAIL_SUPPRESS_SEND']=False
-app.config['MAIL_ASCII_ATTACHMENTS']=False
-
-
-#  app password   fgyy axcd depv vexe
-mail=Mail(app)
-
-def SendEmail(ch, method, properties, body):
-    
     json_value=json.loads(body)
-    print("Loaded json value")
-    fileuuid=json_value["File_uuid"]
-    job_id=json_value["Jobid"]
+    report_file_name=json_value["File_uuid"]
+    jobid=json_value["Jobid"]
+    print(f"received a new filehash= {report_file_name} and a new jobid = {jobid}")
+    #report_path=f'/home/omrapp/Desktop/{report_file_name}.txt'
     
-    email="21f1001663@ds.study.iitm.ac.in"
-    msg= Message('JUGAAD Testbed - Your runtime trails are ready !', sender='allan.n.pais@gmail.com',recipients=email)
-    msg.body='Dear '+email+'Your runtime trails are available in the file below. \n Thank you for using OpenMalwareResearch!'
-    with app.open_resource(f'/home/omrapp/Desktop/Jugaad_test/script.js') as fp:
-        #with app.open_resource(os.path.join(app.instance_path, 'test.txt')) as fp:
-      msg.attach("script.js", "application/txt", fp.read())   
-      mail.send(msg)
-    print("Job processed from queue and email sent to the user")
-    print("Job Closed Successfully")
-@app.route("/")
+    cursor.execute("select user_email from omr_data where job_id=%s",(jobid,))
+    email_id=list(cursor.fetchall()[0])[0]
+    subject=f"Greetings {email_id}! Open Malware Research has processed your report!"
 
-def send():
-    credentials = pika.PlainCredentials('OMR_RMQ','Omr@123')
-    connection = pika.BlockingConnection(pika.ConnectionParameters('172.23.254.74', 5672, '/', credentials))
-    channel=connection.channel()
-    channel.queue_declare("queue_2")
-    channel.basic_consume(queue="queue_2", auto_ack=True, on_message_callback=SendEmail)
-    return "ok"
-    
+    body=f'''Dear {email_id},
 
-  
+    I hope this email finds you well. Please find the runtime trails attached for your review.
+
+    We appreciate your continued trust in the Open Malware Research Service. If you have any further questions or require additional assistance, feel free to reach out.
+
+    Thank you for choosing our services.
+
+    Best regards,
+    OpenMalwareResearch'''
+
+    sender_email="allan.n.pais@gmail.com"
+    password='fgyy axcd depv vexe'
+    smtp_server='smtp.gmail.com'
+    sender_password='fgyy axcd depv vexe'
+    smtp_port=587
+
+    message = MIMEMultipart()
+    message['Subject']=subject
+    message['From']=sender_email
+    message['To']=email_id 
+
+    files=[f'/home/omrapp/Desktop/reporthash/{report_file_name}.txt']
+
+    message.attach(MIMEText(body))
+
+    for f in files :
+            with open(f, "rb") as fil:
+                part = MIMEApplication(
+                    fil.read(),
+                    Name=basename(f)
+                )
+                
+                part['Content-Disposition'] = 'attachment; filename="%s"' % basename(f)
+                message.attach(part)
+
+    smtp = smtplib.SMTP(smtp_server, 587)
+    smtp.starttls()
+    smtp.login(sender_email,password)
+    smtp.sendmail(sender_email, email_id, message.as_string())
+    smtp.close()
+    cursor.execute("update omr_data set job_status='completed' where job_id=%s",(jobid,))
+    print("Email Sent!")
 
 
-if __name__=="__main__":
-    # db.create_all()
-    
-    app.debug=True 
 
-    app.run(host='localhost',port=5001)
+channel=connection2.channel()
+
+channel.queue_declare("queue_2")
+
+
+channel.basic_consume(queue='queue_2', auto_ack=True, on_message_callback=on_message_received)
+
+print("Starting the sending of emails")
+
+channel.start_consuming()
