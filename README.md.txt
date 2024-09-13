@@ -1,0 +1,1 @@
+please read before starting the project
