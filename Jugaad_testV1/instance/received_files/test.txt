@@ -1,0 +1,3 @@
+test the jugaad framework and get it running 
+implement vue js for the frontend 
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+  <title>file upload page</title>
+</head>
+<html>
+    <body> 
+        <h1> file upload page is here </h1>
+        <form action = "http://10.21.238.198:5000/filesend" method="POST" onsubmit="CreateZip()"
+        enctype = "multipart/form-data" id="SubmitForm" >
+        <input type = "file" id = "files" name = "files"/>
+        <input type="email" name="email" placeholder="Enter Email"/>
+         <br><br><br> <br><br><br>
+        <input type="text" name="comments" placeholder="Enter file comments in less than 100 words", maxlength="100", style="height: 5em; width: 30em;"/>
+        <br><br><br>
+        <button type="file" id="file">Press to Submit</button>
+      <!-- <input type ="submit" value="Upload and Compress" > -->
+     </form>
+   
+    </body>
+    <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+    
+    <!-- --------------------------------------- -->

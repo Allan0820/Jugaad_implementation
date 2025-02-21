@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Status</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        label {
+            font-size: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Check Job Status</h1>
+    <form method="POST">
+        <label for="job_id">Enter Job ID:</label>
+        <input type="text" id="job_id" name="job_id" required>
+        <button type="submit">Check Status</button>
+    </form>
+
+    {% if job_status is not none %}
+    <div class="result">
+        <p><strong>Status:</strong> {{ job_status }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
+

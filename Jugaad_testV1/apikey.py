@@ -1,0 +1,3 @@
+CLIENT_ID="489653581798-5ds047b9fae9ngii73fst9ch0e8hnuqj.apps.googleusercontent.com"
+CLIENT_SECRET="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"
+SECRET_KEY="ffu3jmfq9c8u4owm738hw8374hnc4387cfhnic"
