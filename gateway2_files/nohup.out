@@ -1,0 +1,609 @@
+File b05a7c9245c777ab31e1efe14bbc39c7.dat copied successfully to 192.168.3.1:/home/jugaad/jugaad/Malware/Profiler_OS_NW/malware_submission
+Inside the shell script
+The arguments passed to the runstarttest script are as follows
+192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py b05a7c9245c777ab31e1efe14bbc39c7.dat
+tshark: no process found
+PING 192.168.2.27 (192.168.2.27) 56(84) bytes of data.
+64 bytes from 192.168.2.27: icmp_seq=1 ttl=128 time=0.814 ms
+
+--- 192.168.2.27 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.814/0.814/0.814/0.000 ms
+tshark: Invalid or unknown -b arg "duration:"
+tshark: Invalid or unknown -b arg "duration:"
+tshark: Invalid or unknown -b arg "duration:"
+
+
+################# PROCMON ######################
+
+
+--> Starting Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /AcceptEula /NoFilter /BackingFile "C:\\Profiler_OS_NW\\OS_Data_pml\\b05a7c9245c777ab31e1efe14bbc39c7.pml" /Quiet /Minimized /LoadConfig ""
+--> Stopping Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /Terminate
+--> Converting session to CSV: C:\\Profiler_OS_NW\\OS_Data_csv\\b05a7c9245c777ab31e1efe14bbc39c7.csv
+------> Running cmdline: "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /OpenLog "C:\\Profiler_OS_NW\\OS_Data_pml\\b05a7c9245c777ab31e1efe14bbc39c7.pml" /saveas "C:\\Profiler_OS_NW\\OS_Data_csv\\b05a7c9245c777ab31e1efe14bbc39c7.csv" /LoadConfig ""
+################# PROCMON FINISHED SUCCESSFULLY######################
+kill: (12550): No such process
+kill: (12555): No such process
+Copying the file from the Gateway 1 to the Profiler
+b05a7c9245c777ab31e1efe14bbc39c7.dat  These are the arguments (filehash)------------------------------- These are the arguments
+file transfer from gateway1 to profiler start
+file transfer from  gateway1 to profiler end
+Copy to Profiler successful
+Stop prior tsharks and restart
+0. b05a7c9245c777ab31e1efe14bbc39c7.dat
+
+Starting the Power Shell Script
+
+
+Procmon done
+Stopping the network capture
+
+Completed b05a7c9245c777ab31e1efe14bbc39c7.dat
+-------------------------------------------------------------------------
+
+
+File 2860df8a7bd5b38682689fb3bf11218c.dat copied successfully to 192.168.3.1:/home/jugaad/jugaad/Malware/Profiler_OS_NW/malware_submission
+Inside the shell script
+The arguments passed to the runstarttest script are as follows
+192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py 2860df8a7bd5b38682689fb3bf11218c.dat
+tshark: no process found
+PING 192.168.2.27 (192.168.2.27) 56(84) bytes of data.
+64 bytes from 192.168.2.27: icmp_seq=1 ttl=128 time=1.67 ms
+
+--- 192.168.2.27 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.670/1.670/1.670/0.000 ms
+tshark: Invalid or unknown -b arg "duration:"
+tshark: Invalid or unknown -b arg "duration:"
+tshark: Invalid or unknown -b arg "duration:"
+
+
+################# PROCMON ######################
+
+
+--> Starting Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /AcceptEula /NoFilter /BackingFile "C:\\Profiler_OS_NW\\OS_Data_pml\\2860df8a7bd5b38682689fb3bf11218c.pml" /Quiet /Minimized /LoadConfig ""
+--> Stopping Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /Terminate
+--> Converting session to CSV: C:\\Profiler_OS_NW\\OS_Data_csv\\2860df8a7bd5b38682689fb3bf11218c.csv
+------> Running cmdline: "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /OpenLog "C:\\Profiler_OS_NW\\OS_Data_pml\\2860df8a7bd5b38682689fb3bf11218c.pml" /saveas "C:\\Profiler_OS_NW\\OS_Data_csv\\2860df8a7bd5b38682689fb3bf11218c.csv" /LoadConfig ""
+################# PROCMON FINISHED SUCCESSFULLY######################
+kill: (12841): No such process
+kill: (12846): No such process
+Copying the file from the Gateway 1 to the Profiler
+2860df8a7bd5b38682689fb3bf11218c.dat  These are the arguments (filehash)------------------------------- These are the arguments
+file transfer from gateway1 to profiler start
+file transfer from  gateway1 to profiler end
+Copy to Profiler successful
+Stop prior tsharks and restart
+0. 2860df8a7bd5b38682689fb3bf11218c.dat
+
+Starting the Power Shell Script
+
+
+Procmon done
+Stopping the network capture
+
+Completed 2860df8a7bd5b38682689fb3bf11218c.dat
+-------------------------------------------------------------------------
+
+
+File 11e44d8e3fa49e1a7e4999b95e4f161d.dat copied successfully to 192.168.3.1:/home/jugaad/jugaad/Malware/Profiler_OS_NW/malware_submission
+Inside the shell script
+The arguments passed to the runstarttest script are as follows
+192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py 11e44d8e3fa49e1a7e4999b95e4f161d.dat
+tshark: no process found
+PING 192.168.2.27 (192.168.2.27) 56(84) bytes of data.
+64 bytes from 192.168.2.27: icmp_seq=1 ttl=128 time=1.73 ms
+
+--- 192.168.2.27 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.733/1.733/1.733/0.000 ms
+tshark: Invalid or unknown -b arg "duration:"
+tshark: Invalid or unknown -b arg "duration:"
+tshark: Invalid or unknown -b arg "duration:"
+
+
+################# PROCMON ######################
+
+
+--> Starting Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /AcceptEula /NoFilter /BackingFile "C:\\Profiler_OS_NW\\OS_Data_pml\\11e44d8e3fa49e1a7e4999b95e4f161d.pml" /Quiet /Minimized /LoadConfig ""
+--> Stopping Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /Terminate
+--> Converting session to CSV: C:\\Profiler_OS_NW\\OS_Data_csv\\11e44d8e3fa49e1a7e4999b95e4f161d.csv
+------> Running cmdline: "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /OpenLog "C:\\Profiler_OS_NW\\OS_Data_pml\\11e44d8e3fa49e1a7e4999b95e4f161d.pml" /saveas "C:\\Profiler_OS_NW\\OS_Data_csv\\11e44d8e3fa49e1a7e4999b95e4f161d.csv" /LoadConfig ""
+################# PROCMON FINISHED SUCCESSFULLY######################
+kill: (13312): No such process
+kill: (13317): No such process
+Copying the file from the Gateway 1 to the Profiler
+11e44d8e3fa49e1a7e4999b95e4f161d.dat  These are the arguments (filehash)------------------------------- These are the arguments
+file transfer from gateway1 to profiler start
+file transfer from  gateway1 to profiler end
+Copy to Profiler successful
+Stop prior tsharks and restart
+0. 11e44d8e3fa49e1a7e4999b95e4f161d.dat
+
+Starting the Power Shell Script
+
+
+Procmon done
+Stopping the network capture
+
+Completed 11e44d8e3fa49e1a7e4999b95e4f161d.dat
+-------------------------------------------------------------------------
+
+
+File b351f9f94a6db24af652ab75fb90ed88.dat copied successfully to 192.168.3.1:/home/jugaad/jugaad/Malware/Profiler_OS_NW/malware_submission
+Inside the shell script
+The arguments passed to the runstarttest script are as follows
+192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py b351f9f94a6db24af652ab75fb90ed88.dat
+tshark: no process found
+PING 192.168.2.27 (192.168.2.27) 56(84) bytes of data.
+64 bytes from 192.168.2.27: icmp_seq=1 ttl=128 time=1.66 ms
+
+--- 192.168.2.27 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.662/1.662/1.662/0.000 ms
+tshark: Invalid or unknown -b arg "duration:"
+tshark: Invalid or unknown -b arg "duration:"
+tshark: Invalid or unknown -b arg "duration:"
+
+
+################# PROCMON ######################
+
+
+--> Starting Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /AcceptEula /NoFilter /BackingFile "C:\\Profiler_OS_NW\\OS_Data_pml\\b351f9f94a6db24af652ab75fb90ed88.pml" /Quiet /Minimized /LoadConfig ""
+--> Stopping Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /Terminate
+--> Converting session to CSV: C:\\Profiler_OS_NW\\OS_Data_csv\\b351f9f94a6db24af652ab75fb90ed88.csv
+------> Running cmdline: "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /OpenLog "C:\\Profiler_OS_NW\\OS_Data_pml\\b351f9f94a6db24af652ab75fb90ed88.pml" /saveas "C:\\Profiler_OS_NW\\OS_Data_csv\\b351f9f94a6db24af652ab75fb90ed88.csv" /LoadConfig ""
+################# PROCMON FINISHED SUCCESSFULLY######################
+kill: (13916): No such process
+kill: (13921): No such process
+Copying the file from the Gateway 1 to the Profiler
+b351f9f94a6db24af652ab75fb90ed88.dat  These are the arguments (filehash)------------------------------- These are the arguments
+file transfer from gateway1 to profiler start
+file transfer from  gateway1 to profiler end
+Copy to Profiler successful
+Stop prior tsharks and restart
+0. b351f9f94a6db24af652ab75fb90ed88.dat
+
+Starting the Power Shell Script
+
+
+Procmon done
+Stopping the network capture
+
+Completed b351f9f94a6db24af652ab75fb90ed88.dat
+-------------------------------------------------------------------------
+
+
+File ff18a37dba4c4d2ae6e31b5732f8decc.dat copied successfully to 192.168.3.1:/home/jugaad/jugaad/Malware/Profiler_OS_NW/malware_submission
+Inside the shell script
+The arguments passed to the runstarttest script are as follows
+192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py ff18a37dba4c4d2ae6e31b5732f8decc.dat
+tshark: no process found
+PING 192.168.2.27 (192.168.2.27) 56(84) bytes of data.
+64 bytes from 192.168.2.27: icmp_seq=1 ttl=128 time=0.883 ms
+
+--- 192.168.2.27 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.883/0.883/0.883/0.000 ms
+tshark: Invalid or unknown -b arg "duration:"
+tshark: Invalid or unknown -b arg "duration:"
+tshark: Invalid or unknown -b arg "duration:"
+
+
+################# PROCMON ######################
+
+
+--> Starting Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /AcceptEula /NoFilter /BackingFile "C:\\Profiler_OS_NW\\OS_Data_pml\\ff18a37dba4c4d2ae6e31b5732f8decc.pml" /Quiet /Minimized /LoadConfig ""
+--> Stopping Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /Terminate
+--> Converting session to CSV: C:\\Profiler_OS_NW\\OS_Data_csv\\ff18a37dba4c4d2ae6e31b5732f8decc.csv
+------> Running cmdline: "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /OpenLog "C:\\Profiler_OS_NW\\OS_Data_pml\\ff18a37dba4c4d2ae6e31b5732f8decc.pml" /saveas "C:\\Profiler_OS_NW\\OS_Data_csv\\ff18a37dba4c4d2ae6e31b5732f8decc.csv" /LoadConfig ""
+################# PROCMON FINISHED SUCCESSFULLY######################
+kill: (14228): No such process
+kill: (14233): No such process
+Copying the file from the Gateway 1 to the Profiler
+ff18a37dba4c4d2ae6e31b5732f8decc.dat  These are the arguments (filehash)------------------------------- These are the arguments
+file transfer from gateway1 to profiler start
+file transfer from  gateway1 to profiler end
+Copy to Profiler successful
+Stop prior tsharks and restart
+0. ff18a37dba4c4d2ae6e31b5732f8decc.dat
+
+Starting the Power Shell Script
+
+
+Procmon done
+Stopping the network capture
+
+Completed ff18a37dba4c4d2ae6e31b5732f8decc.dat
+-------------------------------------------------------------------------
+
+
+File 3d3dd361223de526470e3d15c9061c00.dat copied successfully to 192.168.3.1:/home/jugaad/jugaad/Malware/Profiler_OS_NW/malware_submission
+Inside the shell script
+The arguments passed to the runstarttest script are as follows
+192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py 3d3dd361223de526470e3d15c9061c00.dat
+tshark: no process found
+PING 192.168.2.27 (192.168.2.27) 56(84) bytes of data.
+64 bytes from 192.168.2.27: icmp_seq=1 ttl=128 time=0.402 ms
+
+--- 192.168.2.27 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.402/0.402/0.402/0.000 ms
+tshark: Invalid or unknown -b arg "duration:"
+tshark: Invalid or unknown -b arg "duration:"
+tshark: Invalid or unknown -b arg "duration:"
+
+
+################# PROCMON ######################
+
+
+--> Starting Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /AcceptEula /NoFilter /BackingFile "C:\\Profiler_OS_NW\\OS_Data_pml\\3d3dd361223de526470e3d15c9061c00.pml" /Quiet /Minimized /LoadConfig ""
+--> Stopping Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /Terminate
+--> Converting session to CSV: C:\\Profiler_OS_NW\\OS_Data_csv\\3d3dd361223de526470e3d15c9061c00.csv
+------> Running cmdline: "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /OpenLog "C:\\Profiler_OS_NW\\OS_Data_pml\\3d3dd361223de526470e3d15c9061c00.pml" /saveas "C:\\Profiler_OS_NW\\OS_Data_csv\\3d3dd361223de526470e3d15c9061c00.csv" /LoadConfig ""
+################# PROCMON FINISHED SUCCESSFULLY######################
+kill: (14520): No such process
+kill: (14525): No such process
+Copying the file from the Gateway 1 to the Profiler
+3d3dd361223de526470e3d15c9061c00.dat  These are the arguments (filehash)------------------------------- These are the arguments
+file transfer from gateway1 to profiler start
+file transfer from  gateway1 to profiler end
+Copy to Profiler successful
+Stop prior tsharks and restart
+0. 3d3dd361223de526470e3d15c9061c00.dat
+
+Starting the Power Shell Script
+
+
+Procmon done
+Stopping the network capture
+
+Completed 3d3dd361223de526470e3d15c9061c00.dat
+-------------------------------------------------------------------------
+
+
+File e89e560b11c1b56383939c0f2b77aa62.dat copied successfully to 192.168.3.1:/home/jugaad/jugaad/Malware/Profiler_OS_NW/malware_submission
+Inside the shell script
+The arguments passed to the runstarttest script are as follows
+192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py e89e560b11c1b56383939c0f2b77aa62.dat
+tshark: no process found
+PING 192.168.2.27 (192.168.2.27) 56(84) bytes of data.
+64 bytes from 192.168.2.27: icmp_seq=1 ttl=128 time=0.253 ms
+
+--- 192.168.2.27 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.253/0.253/0.253/0.000 ms
+/bin/sh: 1: /home/jugaad/jugaad/Malware/GW1/GW_StartNetworkCapture_all.sh: not found
+
+
+################# PROCMON ######################
+
+
+--> Starting Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /AcceptEula /NoFilter /BackingFile "C:\\Profiler_OS_NW\\OS_Data_pml\\e89e560b11c1b56383939c0f2b77aa62.pml" /Quiet /Minimized /LoadConfig ""
+--> Stopping Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /Terminate
+--> Converting session to CSV: C:\\Profiler_OS_NW\\OS_Data_csv\\e89e560b11c1b56383939c0f2b77aa62.csv
+------> Running cmdline: "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /OpenLog "C:\\Profiler_OS_NW\\OS_Data_pml\\e89e560b11c1b56383939c0f2b77aa62.pml" /saveas "C:\\Profiler_OS_NW\\OS_Data_csv\\e89e560b11c1b56383939c0f2b77aa62.csv" /LoadConfig ""
+################# PROCMON FINISHED SUCCESSFULLY######################
+kill: (14969): No such process
+kill: (14974): No such process
+Copying the file from the Gateway 1 to the Profiler
+e89e560b11c1b56383939c0f2b77aa62.dat  These are the arguments (filehash)------------------------------- These are the arguments
+file transfer from gateway1 to profiler start
+file transfer from  gateway1 to profiler end
+Copy to Profiler successful
+Stop prior tsharks and restart
+0. e89e560b11c1b56383939c0f2b77aa62.dat
+
+Starting the Power Shell Script
+
+
+Procmon done
+Stopping the network capture
+
+Completed e89e560b11c1b56383939c0f2b77aa62.dat
+-------------------------------------------------------------------------
+
+
+File d6bdcc17ef209c43db3bc793891f742c.dat copied successfully to 192.168.3.1:/home/jugaad/jugaad/Malware/Profiler_OS_NW/malware_submission
+Inside the shell script
+The arguments passed to the runstarttest script are as follows
+192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py d6bdcc17ef209c43db3bc793891f742c.dat
+tshark: no process found
+PING 192.168.2.27 (192.168.2.27) 56(84) bytes of data.
+64 bytes from 192.168.2.27: icmp_seq=1 ttl=128 time=1.77 ms
+
+--- 192.168.2.27 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.777/1.777/1.777/0.000 ms
+/bin/sh: 1: /home/jugaad/jugaad/Malware/GW1/GW_StartNetworkCapture_all.sh: not found
+
+
+################# PROCMON ######################
+
+
+--> Starting Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /AcceptEula /NoFilter /BackingFile "C:\\Profiler_OS_NW\\OS_Data_pml\\d6bdcc17ef209c43db3bc793891f742c.pml" /Quiet /Minimized /LoadConfig ""
+--> Stopping Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /Terminate
+--> Converting session to CSV: C:\\Profiler_OS_NW\\OS_Data_csv\\d6bdcc17ef209c43db3bc793891f742c.csv
+------> Running cmdline: "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /OpenLog "C:\\Profiler_OS_NW\\OS_Data_pml\\d6bdcc17ef209c43db3bc793891f742c.pml" /saveas "C:\\Profiler_OS_NW\\OS_Data_csv\\d6bdcc17ef209c43db3bc793891f742c.csv" /LoadConfig ""
+################# PROCMON FINISHED SUCCESSFULLY######################
+kill: (15295): No such process
+kill: (15300): No such process
+Copying the file from the Gateway 1 to the Profiler
+d6bdcc17ef209c43db3bc793891f742c.dat  These are the arguments (filehash)------------------------------- These are the arguments
+file transfer from gateway1 to profiler start
+file transfer from  gateway1 to profiler end
+Copy to Profiler successful
+Stop prior tsharks and restart
+0. d6bdcc17ef209c43db3bc793891f742c.dat
+
+Starting the Power Shell Script
+
+
+Procmon done
+Stopping the network capture
+
+Completed d6bdcc17ef209c43db3bc793891f742c.dat
+-------------------------------------------------------------------------
+
+
+File 6febeb61094c34aa2099eb7e08daa732.dat copied successfully to 192.168.3.1:/home/jugaad/jugaad/Malware/Profiler_OS_NW/malware_submission
+Inside the shell script
+The arguments passed to the runstarttest script are as follows
+192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py 6febeb61094c34aa2099eb7e08daa732.dat
+tshark: no process found
+PING 192.168.2.27 (192.168.2.27) 56(84) bytes of data.
+64 bytes from 192.168.2.27: icmp_seq=1 ttl=128 time=1.66 ms
+
+--- 192.168.2.27 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.660/1.660/1.660/0.000 ms
+/bin/sh: 1: /home/jugaad/jugaad/Malware/GW1/GW_StartNetworkCapture_all.sh: not found
+
+
+################# PROCMON ######################
+
+
+--> Starting Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /AcceptEula /NoFilter /BackingFile "C:\\Profiler_OS_NW\\OS_Data_pml\\6febeb61094c34aa2099eb7e08daa732.pml" /Quiet /Minimized /LoadConfig ""
+--> Stopping Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /Terminate
+--> Converting session to CSV: C:\\Profiler_OS_NW\\OS_Data_csv\\6febeb61094c34aa2099eb7e08daa732.csv
+------> Running cmdline: "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /OpenLog "C:\\Profiler_OS_NW\\OS_Data_pml\\6febeb61094c34aa2099eb7e08daa732.pml" /saveas "C:\\Profiler_OS_NW\\OS_Data_csv\\6febeb61094c34aa2099eb7e08daa732.csv" /LoadConfig ""
+################# PROCMON FINISHED SUCCESSFULLY######################
+kill: (15534): No such process
+kill: (15539): No such process
+Copying the file from the Gateway 1 to the Profiler
+6febeb61094c34aa2099eb7e08daa732.dat  These are the arguments (filehash)------------------------------- These are the arguments
+file transfer from gateway1 to profiler start
+file transfer from  gateway1 to profiler end
+Copy to Profiler successful
+Stop prior tsharks and restart
+0. 6febeb61094c34aa2099eb7e08daa732.dat
+
+Starting the Power Shell Script
+
+
+Procmon done
+Stopping the network capture
+
+Completed 6febeb61094c34aa2099eb7e08daa732.dat
+-------------------------------------------------------------------------
+
+
+File eefe2fec99a49304ff691a3da0d63b6e.dat copied successfully to 192.168.3.1:/home/jugaad/jugaad/Malware/Profiler_OS_NW/malware_submission
+Inside the shell script
+The arguments passed to the runstarttest script are as follows
+192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py eefe2fec99a49304ff691a3da0d63b6e.dat
+tshark: no process found
+PING 192.168.2.27 (192.168.2.27) 56(84) bytes of data.
+64 bytes from 192.168.2.27: icmp_seq=1 ttl=128 time=1.71 ms
+
+--- 192.168.2.27 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.719/1.719/1.719/0.000 ms
+/bin/sh: 1: /home/jugaad/jugaad/Malware/GW1/GW_StartNetworkCapture_all.sh: not found
+
+
+################# PROCMON ######################
+
+
+--> Starting Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /AcceptEula /NoFilter /BackingFile "C:\\Profiler_OS_NW\\OS_Data_pml\\eefe2fec99a49304ff691a3da0d63b6e.pml" /Quiet /Minimized /LoadConfig ""
+--> Stopping Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /Terminate
+--> Converting session to CSV: C:\\Profiler_OS_NW\\OS_Data_csv\\eefe2fec99a49304ff691a3da0d63b6e.csv
+------> Running cmdline: "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /OpenLog "C:\\Profiler_OS_NW\\OS_Data_pml\\eefe2fec99a49304ff691a3da0d63b6e.pml" /saveas "C:\\Profiler_OS_NW\\OS_Data_csv\\eefe2fec99a49304ff691a3da0d63b6e.csv" /LoadConfig ""
+################# PROCMON FINISHED SUCCESSFULLY######################
+kill: (15866): No such process
+kill: (15871): No such process
+Copying the file from the Gateway 1 to the Profiler
+eefe2fec99a49304ff691a3da0d63b6e.dat  These are the arguments (filehash)------------------------------- These are the arguments
+file transfer from gateway1 to profiler start
+file transfer from  gateway1 to profiler end
+Copy to Profiler successful
+Stop prior tsharks and restart
+0. eefe2fec99a49304ff691a3da0d63b6e.dat
+
+Starting the Power Shell Script
+
+
+Procmon done
+Stopping the network capture
+
+Completed eefe2fec99a49304ff691a3da0d63b6e.dat
+-------------------------------------------------------------------------
+
+
+File f4fcab9e80eaeeacd0c65787efeea6a3.dat copied successfully to 192.168.3.1:/home/jugaad/jugaad/Malware/Profiler_OS_NW/malware_submission
+Inside the shell script
+The arguments passed to the runstarttest script are as follows
+192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py f4fcab9e80eaeeacd0c65787efeea6a3.dat
+tshark: no process found
+PING 192.168.2.27 (192.168.2.27) 56(84) bytes of data.
+64 bytes from 192.168.2.27: icmp_seq=1 ttl=128 time=1.63 ms
+
+--- 192.168.2.27 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.639/1.639/1.639/0.000 ms
+/bin/sh: 1: /home/jugaad/jugaad/Malware/GW1/GW_StartNetworkCapture_all.sh: not found
+
+
+################# PROCMON ######################
+
+
+--> Starting Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /AcceptEula /NoFilter /BackingFile "C:\\Profiler_OS_NW\\OS_Data_pml\\f4fcab9e80eaeeacd0c65787efeea6a3.pml" /Quiet /Minimized /LoadConfig ""
+--> Stopping Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /Terminate
+--> Converting session to CSV: C:\\Profiler_OS_NW\\OS_Data_csv\\f4fcab9e80eaeeacd0c65787efeea6a3.csv
+------> Running cmdline: "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /OpenLog "C:\\Profiler_OS_NW\\OS_Data_pml\\f4fcab9e80eaeeacd0c65787efeea6a3.pml" /saveas "C:\\Profiler_OS_NW\\OS_Data_csv\\f4fcab9e80eaeeacd0c65787efeea6a3.csv" /LoadConfig ""
+################# PROCMON FINISHED SUCCESSFULLY######################
+kill: (16108): No such process
+kill: (16113): No such process
+Copying the file from the Gateway 1 to the Profiler
+f4fcab9e80eaeeacd0c65787efeea6a3.dat  These are the arguments (filehash)------------------------------- These are the arguments
+file transfer from gateway1 to profiler start
+file transfer from  gateway1 to profiler end
+Copy to Profiler successful
+Stop prior tsharks and restart
+0. f4fcab9e80eaeeacd0c65787efeea6a3.dat
+
+Starting the Power Shell Script
+
+
+Procmon done
+Stopping the network capture
+
+Completed f4fcab9e80eaeeacd0c65787efeea6a3.dat
+-------------------------------------------------------------------------
+
+
+File 2ecb6179d04f1a0c06611d79a877d403.dat copied successfully to 192.168.3.1:/home/jugaad/jugaad/Malware/Profiler_OS_NW/malware_submission
+Inside the shell script
+The arguments passed to the runstarttest script are as follows
+192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py 2ecb6179d04f1a0c06611d79a877d403.dat
+tshark: no process found
+PING 192.168.2.27 (192.168.2.27) 56(84) bytes of data.
+64 bytes from 192.168.2.27: icmp_seq=1 ttl=128 time=1.66 ms
+
+--- 192.168.2.27 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.668/1.668/1.668/0.000 ms
+/bin/sh: 1: /home/jugaad/jugaad/Malware/GW1/GW_StartNetworkCapture_all.sh: not found
+
+
+################# PROCMON ######################
+
+
+--> Starting Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /AcceptEula /NoFilter /BackingFile "C:\\Profiler_OS_NW\\OS_Data_pml\\2ecb6179d04f1a0c06611d79a877d403.pml" /Quiet /Minimized /LoadConfig ""
+--> Stopping Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /Terminate
+--> Converting session to CSV: C:\\Profiler_OS_NW\\OS_Data_csv\\2ecb6179d04f1a0c06611d79a877d403.csv
+------> Running cmdline: "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /OpenLog "C:\\Profiler_OS_NW\\OS_Data_pml\\2ecb6179d04f1a0c06611d79a877d403.pml" /saveas "C:\\Profiler_OS_NW\\OS_Data_csv\\2ecb6179d04f1a0c06611d79a877d403.csv" /LoadConfig ""
+################# PROCMON FINISHED SUCCESSFULLY######################
+kill: (16359): No such process
+kill: (16364): No such process
+Copying the file from the Gateway 1 to the Profiler
+2ecb6179d04f1a0c06611d79a877d403.dat  These are the arguments (filehash)------------------------------- These are the arguments
+file transfer from gateway1 to profiler start
+file transfer from  gateway1 to profiler end
+Copy to Profiler successful
+Stop prior tsharks and restart
+0. 2ecb6179d04f1a0c06611d79a877d403.dat
+
+Starting the Power Shell Script
+
+
+Procmon done
+Stopping the network capture
+
+Completed 2ecb6179d04f1a0c06611d79a877d403.dat
+-------------------------------------------------------------------------
+
+
+File 08843753b1a6bf595eede993cf176f91.dat copied successfully to 192.168.3.1:/home/jugaad/jugaad/Malware/Profiler_OS_NW/malware_submission
+Inside the shell script
+The arguments passed to the runstarttest script are as follows
+192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py 08843753b1a6bf595eede993cf176f91.dat
+tshark: no process found
+PING 192.168.2.27 (192.168.2.27) 56(84) bytes of data.
+64 bytes from 192.168.2.27: icmp_seq=1 ttl=128 time=0.256 ms
+
+--- 192.168.2.27 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.256/0.256/0.256/0.000 ms
+/bin/sh: 1: /home/jugaad/jugaad/Malware/GW1/GW_StartNetworkCapture_all.sh: not found
+
+
+################# PROCMON ######################
+
+
+--> Starting Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /AcceptEula /NoFilter /BackingFile "C:\\Profiler_OS_NW\\OS_Data_pml\\08843753b1a6bf595eede993cf176f91.pml" /Quiet /Minimized /LoadConfig ""
+--> Stopping Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /Terminate
+--> Converting session to CSV: C:\\Profiler_OS_NW\\OS_Data_csv\\08843753b1a6bf595eede993cf176f91.csv
+------> Running cmdline: "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /OpenLog "C:\\Profiler_OS_NW\\OS_Data_pml\\08843753b1a6bf595eede993cf176f91.pml" /saveas "C:\\Profiler_OS_NW\\OS_Data_csv\\08843753b1a6bf595eede993cf176f91.csv" /LoadConfig ""
+################# PROCMON FINISHED SUCCESSFULLY######################
+sshpass: Failed to run command: No such file or directory
+Copying the file from the Gateway 1 to the Profiler
+08843753b1a6bf595eede993cf176f91.dat  These are the arguments (filehash)------------------------------- These are the arguments
+file transfer from gateway1 to profiler start
+file transfer from  gateway1 to profiler end
+Copy to Profiler successful
+Stop prior tsharks and restart
+0. 08843753b1a6bf595eede993cf176f91.dat
+
+Starting the Power Shell Script
+
+
+Procmon done
+Stopping the network capture
+
+Completed 08843753b1a6bf595eede993cf176f91.dat
+-------------------------------------------------------------------------
+
+
