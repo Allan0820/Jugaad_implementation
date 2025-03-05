@@ -1,0 +1,9 @@
+atom1	00:22:4D:82:5C:87
+atom2	00:22:4D:82:5C:C1
+atom3	00:22:4D:82:54:E8
+atom4	00:22:4D:82:5C:E4
+atom7	00:22:4D:82:5C:FA
+atom8	00:22:4D:82:5D:00
+atom10	00:1C:C0:8C:BB:2F
+molecule	C8:9C:DC:A4:9C:A4
+jugaad	00:07:E9:2A:F2:6E
