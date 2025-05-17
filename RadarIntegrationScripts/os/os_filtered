@@ -1,0 +1,9 @@
+,Time of Day,Process Name,PID,Operation,Path,Result,Detail
+194,11:45:34.1974649,defrag.exe,1320,Process Profiling,,SUCCESS,"User Time: 0.0156250 seconds, Kernel Time: 0.0000000 seconds, Private Bytes: 1351680, Working Set: 2543616"
+50523,11:45:35.2036602,defrag.exe,1320,Process Profiling,,SUCCESS,"User Time: 0.0156250 seconds, Kernel Time: 0.0000000 seconds, Private Bytes: 1351680, Working Set: 2543616"
+51262,11:45:35.2180754,defrag.exe,1320,Thread Exit,,SUCCESS,"Thread ID: 3352, User Time: 0.0000000, Kernel Time: 0.0000000"
+99453,11:45:36.2035259,defrag.exe,1320,Process Profiling,,SUCCESS,"User Time: 0.0156250 seconds, Kernel Time: 0.0000000 seconds, Private Bytes: 1318912, Working Set: 2756608"
+155747,11:45:37.2039473,defrag.exe,1320,Process Profiling,,SUCCESS,"User Time: 0.0156250 seconds, Kernel Time: 0.0000000 seconds, Private Bytes: 1318912, Working Set: 2756608"
+199177,11:45:38.0853619,defrag.exe,1320,Thread Create,,SUCCESS,Thread ID: 1888
+205043,11:45:38.1958707,defrag.exe,1320,Process Profiling,,SUCCESS,"User Time: 0.0156250 seconds, Kernel Time: 0.0000000 seconds, Private Bytes: 1347584, Working Set: 2830336"
+270359,11:45:39.1885313,defrag.exe,1320,Process Profiling,,SUCCESS,"User Time: 0.0156250 seconds, Kernel Time: 0.0000000 seconds, Private Bytes: 1347584, Working Set: 2830336"
