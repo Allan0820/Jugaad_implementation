@@ -1,5 +1,6 @@
 from email_config import *
 from database_config import *
+from imports import *
 
 username_list=[]
 
@@ -31,7 +32,12 @@ def authorize_google():
      userinfo_endpoint=google.server_metadata['userinfo_endpoint']
      resp = google.get(userinfo_endpoint)
      user_info = resp.json()
+     print(user_info)
      username = user_info['email']
+     actual_name=user_info['name']
+     picture_url=user_info['picture']
+     given_name=user_info['given_name']
+     email_verification_status=user_info['email_verified']
      username_list.append(username)
      session["username"]=username 
      session["oauth_token"]=token['access_token']
@@ -52,14 +58,23 @@ def receive():
     print("The value of the path is  ",app.instance_path)
     if request.method == 'POST':
 
-        try:    #app.run()
+        try:
             files = request.files['files']
         except KeyError:
-            return "Missing 'name' key in the form!"
+            return "Missing 'file name' key in the form!"
     
         email = request.form['email'] 
         user_id = User_Check(email) #now here we will check whether the us•••••••er exist here or not 
         comments = request.form['comments']    #app.run()
+        filename = files.filename
+        if filename != '':
+           file_ext = os.path.splitext(filename)[1]
+        else:
+           return "You have not uploaded any file !!!!! "
+
+        if file_ext not in app.config['UPLOAD_EXTENSIONS']:
+            return "File type not supported. Please try again with executables only!!!"
+
         filename=secure_filename(files.filename)
         file_md5_hash=filename 
         file_md5_hash=hashlib.md5(files.read()).hexdigest()
@@ -94,10 +109,5 @@ def receive():
             
             #requests.post(f"http://omr.iitm.ac.in/oauth/v2/{token["access_token"]}/revoke")
             session.clear()
-            # client_id.auth.revoke_token()
             
             return render_template("filesuccess.html")
-#--------------------------------------------------
-# @app.route('/upload_file/', methods=['POST'])
-# def upload_file():
-#         file = request.files['file']

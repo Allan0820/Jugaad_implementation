@@ -7,6 +7,7 @@ import smtplib
 import smtplib
 import subprocess
 import shlex
+from pradar import network_scripts_production_ready, os_scripts_production_ready
 from os.path import basename
 from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
@@ -74,6 +75,8 @@ def on_message_received(ch, method, properties, body):
     enterTH(job_id,report_file_name)
     user_ids = getUIDS(job_id)
     email_id = getEmail(user_ids)
+    # email_id.append("21f1001663@ds.study.iitm.ac.in")
+
     if email_id == "":
         email_id="allaniitm0820@gmail.com"
     
@@ -100,19 +103,24 @@ def on_message_received(ch, method, properties, body):
         smtp_server='smtp.gmail.com'
         sender_password='fgyy axcd depv vexe'
         smtp_port=587
-         
+
+        print("Starting the RaDAR purification")
+        print("Compiling the OS + Network files")
+        network_scripts_production_ready.zeek_process(report_file_name)
+        os_scripts_production_ready.os_scripts(report_file_name)
+        print("Ended the RaDAR purification")
+        os.system("zip -j /home/omrapp/Desktop/reporthash/"+"radar_processed_"+report_file_name+".zip /home/omrapp/Desktop/reporthash/radar_processed_ostrails_"+report_file_name+".csv /home/omrapp/Desktop/reporthash/radar_processed_networktrails_"+report_file_name+".csv")
+        os.system("rm /home/omrapp/Desktop/reporthash/*.csv")
+        # os.system("mv /home/omrapp/Desktop/reporthash/returned_os_logs/*.csv /home/omrapp/Desktop/reporthash/raw_os")
+        # os.system("mv /home/omrapp/Desktop/reporthash/returned_network_logs/*.pcap /home/omrapp/Desktop/reporthash/raw_network")
+
         # try:
         message = MIMEMultipart()
         message['Subject']=subject
         message['From']=sender_email
         message['To']=emails
-        testst= "/home/omrapp/Desktop/Jugaad_testV1/zipper.sh"
-        print("Starting the zipping process")
-        zip_call_with_args="/home/omrapp/Desktop/Jugaad_testV1/zipper.sh '%s'" % (str(report_file_name))
-        os.system(zip_call_with_args)
-        # subprocess.call([testst,report_file_name])
-        print("done zipping")
-        files=[f'/home/omrapp/Desktop/reporthash/{report_file_name}.zip']
+        
+        files=[f'/home/omrapp/Desktop/reporthash/radar_processed_{report_file_name}.zip']
 
         message.attach(MIMEText(body))
 

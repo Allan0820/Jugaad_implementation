@@ -101,7 +101,7 @@ def enterMalware(filehash , user_id):
         return -1
 #--------------------------------------------------
 def setReq(user_id , job_id, comment):
-    query = "insert into request_table (user_id , job_id,comment)values(%s , %s , %s)"
+    query = "insert into request_table (user_id , job_id, comment)values(%s , %s , %s)"
     cursor.execute(query,(user_id,job_id,comment))
     result = cursor.fetchone
     if result:

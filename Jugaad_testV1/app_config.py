@@ -23,6 +23,7 @@ app.config['MAIL_DEFAULT_SENDER']=None
 app.config['MAIL_MAX_EMAILS']=None
 app.config['MAIL_ASCII_ATTACHMENTS']=False
 app.config['SECRET_KEY']=SECRET_KEY
+app.config['UPLOAD_EXTENSIONS'] = ['.exe', '.com', '.bat', '.cmd', '.msi', '.msp', '.scr', '.ps1', '.vbs', '.js', '.wsf', '.jse', '.vbe', '.pif', '.gadget', '.hta', '.appx', '.appxbundle', '.msix', '.msixbundle']
 
 
 oauth=OAuth(app)
