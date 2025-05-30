@@ -1,0 +1,14 @@
+#!/bin/bash
+
+date=$(date '+%Y-%m-%d %H:%M:%S')
+
+case "$(ps -ax | grep 'python3 /home/omr/jugaad_file_transfer/pullqueueV2.py' | wc -l)" in
+
+1) printf "Restarting the Gateway2 pullqueue function on %s view Error Logs! \n" "$date"
+   nohup python3 /home/omr/jugaad_file_transfer/pullqueueV2.py 2>> /home/omr/report/SYSLOGS_ADMIN_ONLY/gw2omrlogs/gateway2_log.txt &
+   ;;
+
+2) printf "Gateway 2 pullqueue program status checked on %s is GOOD! \n" "$date" >> /home/omr/report/SYSLOGS_ADMIN_ONLY/gw2omrlogs/gateway2_log.txt &
+   ;;
+esac
+

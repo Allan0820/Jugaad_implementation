@@ -1,0 +1,139 @@
+Starting the Pulling of messages to Gateway 2
+^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[Breceived a new filehash= 681833628b89d837adf9a545b2baf719 and a new jobid = 193
+copyexecuted form gateway2 to gateway1 start
+681833628b89d837adf9a545b2baf719.dat                                                               0%    0     0.0KB/s   --:-- ETA681833628b89d837adf9a545b2baf719.dat                                                             100% 4609   281.9KB/s   00:00    
+File 681833628b89d837adf9a545b2baf719.dat copied successfully to 192.168.3.1:/home/jugaad/jugaad/Malware/Profiler_OS_NW/malware_submission
+copyexecuted form gateway2 to gateway1 end
+copied malware to gw1
+Called the remote python function with arguments 
+
+ 192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py 681833628b89d837adf9a545b2baf719
+remote script invocation form gateway1 to profiler callstart
+Inside the shell script
+The arguments passed to the runstarttest script are as follows
+192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py 681833628b89d837adf9a545b2baf719.dat
+tshark: no process found
+PING 192.168.2.27 (192.168.2.27) 56(84) bytes of data.
+64 bytes from 192.168.2.27: icmp_seq=1 ttl=128 time=0.686 ms
+
+--- 192.168.2.27 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.686/0.686/0.686/0.000 ms
+We are now calling Procmon on the profiler from the Gateway1
+Tshark started on Gateway 2 and processes are moved to the background
+Capturing on 'eno1'
+
+
+################# PROCMON ######################
+
+
+--> Starting Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /AcceptEula /NoFilter /BackingFile "C:\\Profiler_OS_NW\\OS_Data_pml\\681833628b89d837adf9a545b2baf719.pml" /Quiet /Minimized /LoadConfig ""
+--> Stopping Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /Terminate
+--> Converting session to CSV: C:\\Profiler_OS_NW\\OS_Data_csv\\681833628b89d837adf9a545b2baf719.csv
+------> Running cmdline: "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /OpenLog "C:\\Profiler_OS_NW\\OS_Data_pml\\681833628b89d837adf9a545b2baf719.pml" /saveas "C:\\Profiler_OS_NW\\OS_Data_csv\\681833628b89d837adf9a545b2baf719.csv" /LoadConfig ""
+################# PROCMON FINISHED SUCCESSFULLY######################
+File transferred to Gateway1
+File transferred to Gateway2
+Remote profiler call executed successfully
+scp: c:/Profiler_OS_NW/*.pid: No such file or directory
+Copying the file from the Gateway 1 to the Profiler
+681833628b89d837adf9a545b2baf719.dat  These are the arguments (filehash)------------------------------- These are the arguments
+file transfer from gateway1 to profiler start
+file transfer from  gateway1 to profiler end
+Copy to Profiler successful
+Stop prior tsharks and restart
+0. 681833628b89d837adf9a545b2baf719.dat
+First command run
+
+Starting the Power Shell Script
+
+
+Procmon done
+Stopping the network capture
+
+Completed 681833628b89d837adf9a545b2baf719.dat
+-------------------------------------------------------------------------
+
+
+remote script invocation form gateway1 to profiler callend
+Message put into receiving (Report) queue
+Job processing complete
+received a new filehash= b7903f8e07594cb9a969c8021bdf9363 and a new jobid = 194
+copyexecuted form gateway2 to gateway1 start
+b7903f8e07594cb9a969c8021bdf9363.dat                                                               0%    0     0.0KB/s   --:-- ETAb7903f8e07594cb9a969c8021bdf9363.dat                                                             100%   86     4.0KB/s   00:00    
+File b7903f8e07594cb9a969c8021bdf9363.dat copied successfully to 192.168.3.1:/home/jugaad/jugaad/Malware/Profiler_OS_NW/malware_submission
+copyexecuted form gateway2 to gateway1 end
+copied malware to gw1
+Called the remote python function with arguments 
+
+ 192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py b7903f8e07594cb9a969c8021bdf9363
+remote script invocation form gateway1 to profiler callstart
+Inside the shell script
+The arguments passed to the runstarttest script are as follows
+192.168.3.1 jugaad /home/jugaad/jugaad/Malware/GW1/startTest/omrFiles remotestartTestV2.py b7903f8e07594cb9a969c8021bdf9363.dat
+tshark: no process found
+PING 192.168.2.27 (192.168.2.27) 56(84) bytes of data.
+64 bytes from 192.168.2.27: icmp_seq=1 ttl=128 time=0.568 ms
+
+--- 192.168.2.27 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.568/0.568/0.568/0.000 ms
+We are now calling Procmon on the profiler from the Gateway1
+Tshark started on Gateway 2 and processes are moved to the background
+Capturing on 'eno1'
+
+
+################# PROCMON ######################
+
+
+--> Starting Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /AcceptEula /NoFilter /BackingFile "C:\\Profiler_OS_NW\\OS_Data_pml\\b7903f8e07594cb9a969c8021bdf9363.pml" /Quiet /Minimized /LoadConfig ""
+--> Stopping Procmon Capture 
+
+------> Running cmdline command : "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /Terminate
+--> Converting session to CSV: C:\\Profiler_OS_NW\\OS_Data_csv\\b7903f8e07594cb9a969c8021bdf9363.csv
+------> Running cmdline: "C:\\Profiler_OS_NW\\ProcessMonitor\\Procmon.exe" /OpenLog "C:\\Profiler_OS_NW\\OS_Data_pml\\b7903f8e07594cb9a969c8021bdf9363.pml" /saveas "C:\\Profiler_OS_NW\\OS_Data_csv\\b7903f8e07594cb9a969c8021bdf9363.csv" /LoadConfig ""
+################# PROCMON FINISHED SUCCESSFULLY######################
+File transferred to Gateway1
+File transferred to Gateway2
+Remote profiler call executed successfully
+scp: c:/Profiler_OS_NW/*.pid: No such file or directory
+Copying the file from the Gateway 1 to the Profiler
+b7903f8e07594cb9a969c8021bdf9363.dat  These are the arguments (filehash)------------------------------- These are the arguments
+file transfer from gateway1 to profiler start
+file transfer from  gateway1 to profiler end
+Copy to Profiler successful
+Stop prior tsharks and restart
+0. b7903f8e07594cb9a969c8021bdf9363.dat
+First command run
+
+Starting the Power Shell Script
+
+
+Procmon done
+Stopping the network capture
+
+Completed b7903f8e07594cb9a969c8021bdf9363.dat
+-------------------------------------------------------------------------
+
+
+remote script invocation form gateway1 to profiler callend
+Message put into receiving (Report) queue
+Job processing complete
+Traceback (most recent call last):
+  File "pullqueueV2.py", line 169, in <module>
+    channel.start_consuming()
+  File "/home/omr/.local/lib/python3.6/site-packages/pika/adapters/blocking_connection.py", line 1883, in start_consuming
+    self._process_data_events(time_limit=None)
+  File "/home/omr/.local/lib/python3.6/site-packages/pika/adapters/blocking_connection.py", line 2044, in _process_data_events
+    self.connection.process_data_events(time_limit=time_limit)
+  File "/home/omr/.local/lib/python3.6/site-packages/pika/adapters/blocking_connection.py", line 842, in process_data_events
+    self._flush_output(common_terminator)
+  File "/home/omr/.local/lib/python3.6/site-packages/pika/adapters/blocking_connection.py", line 523, in _flush_output
+    raise self._closed_result.value.error
+pika.exceptions.ConnectionClosedByBroker: (320, "CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'")
